@@ -2,42 +2,30 @@ PCC
 ===
 
 //Question 1
-# include <iostream>
-#include <sstream>
+<?php
+$number = 1;
 
-using namespace std;
-
-int main()
+for($i = 0; $i < 100; $i++)
 {
-  string num[100];
-	int number = 1;
-	for(int i=0; i<100; i++)
+	if ($number%3 == 0 && $number%5 == 0)
 	{
-		if (number%3 == 0 && number%5 == 0)
-		{
-			num[i] = "AaaBbb";
-		}
-		else if(number%3 == 0)
-		{
-			num[i] = "Aaa";
-		}
-		else if(number%5 == 0)
-		{
-			num[i] = "Bbb";
-		}
-		else
-		{
-			std::string s;  
-			std::stringstream out;  
-			out << number;
-			s = out.str();
-			num[i] = s;
-		}
-		number ++;
-		cout << num[i] << endl;	
+		echo "AaaBbb"."<br/>";
 	}
-	system ("pause");
+	else if ($number%3 == 0)
+	{
+		echo "Aaa"."<br/>";
+	}
+	else if ($number%5 == 0)
+	{
+		echo "Bbb"."<br/>";
+	}
+	else
+	{
+		echo $number."<br/>";
+	}
+	$number ++;
 }
+?>
 
 //Question 2
 //bool isPalindrome(int x) {
